@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.grid {
+    width: 80vw;
+    height: 90vh;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-self: center;
+}
+.celda {
+    width: 150px;
+    height: 150px;
+    gap: 10px;
+    margin-top: 10px;
+    background-color: red;
+    border: 2px solid black;
+}
+
+#botonInicio {
+    height: 40px;
+    width: 70px;
+    
+}
