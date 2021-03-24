@@ -2,11 +2,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    flex-direction: column;
 }
 .grid {
     width: 80vw;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -24,5 +24,11 @@ body {
 #botonInicio {
     height: 40px;
     width: 70px;
-    
+
+}
+
+.mole {
+    background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/mole-1496790-1266488.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
