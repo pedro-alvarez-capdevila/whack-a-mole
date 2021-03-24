@@ -19,6 +19,11 @@ body {
     margin-top: 10px;
     background-color: red;
     border: 2px solid black;
+
+}
+h1 {
+    font-size: 4em;
+    margin-bottom: -1rem;
 }
 
 #botonInicio {
@@ -31,4 +36,21 @@ body {
     background-image: url('https://cdn.iconscout.com/icon/premium/png-256-thumb/mole-1496790-1266488.png');
     background-repeat: no-repeat;
     background-size: cover;
+}
+.contenedorIniciarYgrid {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tamMatriz {
+    border: 1px solid red;
+    padding: 5px;
+    color: wheat;
+    background-color: black;
+}
+
+.contenedorBoton {
+    bottom: 0;
 }

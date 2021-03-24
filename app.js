@@ -11,19 +11,31 @@ boton.addEventListener('click', iniciarJuego);
 
 
 
-// function removerHijos() {
-  
-// }
+function eliminarTablero() {
+    for (let i = 0; i < tamañoDeMatriz; i++) {
+        const celda = document.querySelector('.fila' + i);
+        celda.remove();
+    }
+}
 
-// function iniciarJuego() {
-//     tiempoRestante.textContent = 60;
-//     tiempoTranscurrido = 60;
-//     document.querySelector('#resultado').textContent = 0
-//     resultado = 0;
-//     tamañoDeMatriz = document.querySelector('#tamMatriz').textContent;
-//     removerHijos();
-//     crearTablero(tamañoDeMatriz);
-// }
+function iniciarJuego() {
+    tiempoRestante.textContent = 60;
+    tiempoTranscurrido = 60;
+    document.querySelector('#resultado').textContent = 0
+    resultado = 0;
+    let tam = document.querySelector('#tamMatriz').textContent;
+    eliminarTablero();
+    crearTablero(tam);
+    tamañoDeMatriz = tam;
+    //cambio el tamaño de los cuadrados en caso de que tam sea mayor a 5
+    // if(tamañoDeMatriz>5){
+    //     for (let i = 0; i < tamañoDeMatriz*tamañoDeMatriz; i++) {
+    //         const celda = document.querySelector('.celda' + i);
+    //         celda.style.width = "1px"
+    //         celda.style.height = "1px"
+    //     } 
+    // }
+}
 
 
 function crearTablero(tam){
@@ -46,6 +58,7 @@ crearTablero(tamañoDeMatriz);
 
 // ahora agrego la imagen que va cambiando entre todos los divs
 function celdaRandom() {
+    // busco entre todos y elimino la clase mole
     for (let i = 0; i < tamañoDeMatriz*tamañoDeMatriz; i++) {
         const celda = document.getElementById('celda' + i);
         celda.classList.remove('mole');
@@ -67,7 +80,7 @@ function clickearMole() {
 // ahora tenemos que mover el mole
 function moverMole(){
     let timerId = null
-    timerId = setInterval(celdaRandom, 1000)
+    timerId = setInterval(celdaRandom, 800)
 }
 moverMole();
 // contador de tiempo
